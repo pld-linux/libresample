@@ -15,10 +15,12 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Free sampling-rate conversion library.
+Free sampling-rate conversion library. I't based on resample-1.7
+sources.
 
 %description -l pl
-Wolnodostêpna biblioteka do zmiany czêstotliwo¶ci próbkowania.
+Wolnodostêpna biblioteka do zmiany czêstotliwo¶ci próbkowania. Jest
+oparta na ¼ród³ach resample-1.7.
 
 %package devel
 Summary:	Header files for libresample library
