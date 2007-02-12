@@ -1,5 +1,5 @@
 Summary:	Free sampling-rate conversion library
-Summary(pl):	Wolnodost阷na biblioteka do zmiany cz阺totliwo禼i pr骲kowania
+Summary(pl.UTF-8):   Wolnodost臋pna biblioteka do zmiany cz臋stotliwo艣ci pr贸bkowania
 Name:		libresample
 Version:	0.1.3
 Release:	1
@@ -18,32 +18,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Free sampling-rate conversion library. I't based on resample-1.7
 sources.
 
-%description -l pl
-Wolnodost阷na biblioteka do zmiany cz阺totliwo禼i pr骲kowania. Jest
-oparta na 紃骴砤ch resample-1.7.
+%description -l pl.UTF-8
+Wolnodost臋pna biblioteka do zmiany cz臋stotliwo艣ci pr贸bkowania. Jest
+oparta na 藕r贸d艂ach resample-1.7.
 
 %package devel
 Summary:	Header files for libresample library
-Summary(pl):	Pliki nag丑wkowe biblioteki libresample
+Summary(pl.UTF-8):   Pliki nag艂贸wkowe biblioteki libresample
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libresample library.
 
-%description devel -l pl
-Pliki nag丑wkowe biblioteki libresample.
+%description devel -l pl.UTF-8
+Pliki nag艂贸wkowe biblioteki libresample.
 
 %package static
 Summary:	Static libresample library
-Summary(pl):	Statyczna biblioteka libresample
+Summary(pl.UTF-8):   Statyczna biblioteka libresample
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libresample library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libresample.
 
 %prep
