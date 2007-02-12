@@ -1,5 +1,5 @@
 Summary:	Free sampling-rate conversion library
-Summary(pl.UTF-8):   Wolnodostępna biblioteka do zmiany częstotliwości próbkowania
+Summary(pl.UTF-8):	Wolnodostępna biblioteka do zmiany częstotliwości próbkowania
 Name:		libresample
 Version:	0.1.3
 Release:	1
@@ -24,7 +24,7 @@ oparta na źródłach resample-1.7.
 
 %package devel
 Summary:	Header files for libresample library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libresample
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libresample
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -36,7 +36,7 @@ Pliki nagłówkowe biblioteki libresample.
 
 %package static
 Summary:	Static libresample library
-Summary(pl.UTF-8):   Statyczna biblioteka libresample
+Summary(pl.UTF-8):	Statyczna biblioteka libresample
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
