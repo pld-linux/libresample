@@ -38,10 +38,10 @@
 -tests/testresample: libresample.a $(srcdir)/tests/testresample.c $(DIRS)
 -	$(CC) -o tests/testresample \
 +libresample.la: $(OBJS) Makefile
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS) -rpath $(libdir)
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS) -rpath $(libdir)
 +
 +tests/testresample: libresample.la $(srcdir)/tests/testresample.c $(DIRS)
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o tests/testresample \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) -o tests/testresample \
  		$(CFLAGS) $(srcdir)/tests/testresample.c \
 -		libresample.a $(LIBS)
 +		libresample.la $(LIBS)
@@ -49,7 +49,7 @@
 -tests/compareresample: libresample.a $(srcdir)/tests/compareresample.c $(DIRS)
 -	$(CC) -o tests/compareresample \
 +tests/compareresample: libresample.la $(srcdir)/tests/compareresample.c $(DIRS)
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o tests/compareresample \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) -o tests/compareresample \
  		$(CFLAGS) $(srcdir)/tests/compareresample.c \
 -		libresample.a -lsamplerate $(LIBS)
 +		libresample.la -lsamplerate $(LIBS)
@@ -57,7 +57,7 @@
 -tests/resample-sndfile: libresample.a $(srcdir)/tests/resample-sndfile.c $(DIRS)
 -	$(CC) -o tests/resample-sndfile \
 +tests/resample-sndfile: libresample.la $(srcdir)/tests/resample-sndfile.c $(DIRS)
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o tests/resample-sndfile \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) -o tests/resample-sndfile \
  		$(CFLAGS) $(srcdir)/tests/resample-sndfile.c \
 -		libresample.a -lsndfile $(LIBS)
 +		libresample.la -lsndfile $(LIBS)
@@ -83,4 +83,4 @@
 +$(OBJS): %.lo: $(srcdir)/%.c Makefile $(srcdir)/include/libresample.h \
  	$(srcdir)/src/resample_defs.h $(srcdir)/src/filterkit.h $(srcdir)/src/config.h
 -	$(CC) -c $(CFLAGS) $< -o $@
-+	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $< -o $@
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) -c $(CFLAGS) $< -o $@
