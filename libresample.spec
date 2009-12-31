@@ -5,11 +5,10 @@ Version:	0.1.3
 Release:	1
 License:	LGPL
 Group:		Libraries
-#Source0Download: http://www-ccrma.stanford.edu/~jos/resample/Free_Resampling_Software.html
 Source0:	http://ccrma.stanford.edu/~jos/resample/%{name}-%{version}.tgz
 # Source0-md5:	99bc5ea15ef76b83e5655a10968f674b
 Patch0:		%{name}-shared.patch
-URL:		http://www-ccrma.stanford.edu/~jos/resample/
+URL:		http://www-ccrma.stanford.edu/~jos/resample/Free_Resampling_Software.html
 BuildRequires:	libsndfile-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -71,6 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.txt
 %attr(755,root,root) %{_bindir}/resample-sndfile
 %attr(755,root,root) %{_libdir}/libresample.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libresample.so.0
 
 %files devel
 %defattr(644,root,root,755)
