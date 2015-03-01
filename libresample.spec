@@ -2,7 +2,7 @@ Summary:	Free sampling-rate conversion library
 Summary(pl.UTF-8):	Wolnodostępna biblioteka do zmiany częstotliwości próbkowania
 Name:		libresample
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://ccrma.stanford.edu/~jos/resample/%{name}-%{version}.tgz
